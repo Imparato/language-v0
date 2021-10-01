@@ -7,7 +7,7 @@ This is VS Code language (grammar) support for internal v0 format of [Imparato](
 
 ## Theme improvements
 
-In order to improve display, you can add the following settings in your own `$HOME.vscode/settings.json` file (or `Preferences: Open User Settings`) :
+In order to improve display, you can add the following in your User Settings file (`$HOME/.vscode/settings.json` or `Preferences: Open User Settings`) :
 
 ```json
 {
