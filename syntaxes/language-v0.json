@@ -1,0 +1,102 @@
+{
+  "scopeName": "source.v0",
+  "name": "v0",
+  "fileTypes": ["v0.txt"],
+  "patterns": [
+    {
+      "include": "#heading"
+    },
+    {
+      "include": "#replica"
+    }
+  ],
+  "repository": {
+    "heading": {
+			"match": "^(#{1,2})\\s*(.*?)$",
+      "name": "heading.section.v0",
+			"patterns": [
+				{
+					"include": "#replica"
+				},
+        {
+          "include": "#didascaly"
+        }
+			],
+			"captures": {
+				"1": {
+					"patterns": [
+            {
+              "match": "(#{1})\\s*(.*?)$",
+              "name": "heading.act.v0",
+              "captures": {
+                "1": {
+                  "name": "punctuation.definition.heading.v0"
+                },
+                "2": {
+                  "name": "entity.name.section.v0"
+                }
+              }
+            }
+          ]
+        },
+        "2": {
+					"patterns": [
+            {
+              "match": "(#{2})\\s*(.*?)$",
+              "name": "heading.scene.v0",
+              "captures": {
+                "1": {
+                  "name": "punctuation.definition.heading.v0"
+                },
+                "2": {
+                  "name": "entity.name.section.v0"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "replica": {
+      "begin": "^(@[^\\(]+)(.+)?$",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.tag.v0"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "#didascaly"
+            }
+          ]
+        }
+      },
+      "patterns": [
+        {
+          "include": "#didascaly"
+        },
+        {
+          "include": "#replica"
+        }
+      ]
+    },
+    "didascaly": {
+      "comment": "Didascaly",
+      "match": "(\\()([^\\)]*)(\\))",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.tag.v0"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.begin.v0"
+        },
+        "2": {
+          "name": "punctuation.definition.tag.v0"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.v0"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# Acte 1
+## Scène 1
+
+@Lui (en entrant)
+Salut ! 
+
+@Elle
+Au revoir (sortant)
