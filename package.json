@@ -1,25 +1,39 @@
 {
-    "name": "v0",
-    "displayName": "language-v0",
-    "description": "Language support for Imparato v0 text format.",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.60.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "v0",
+  "displayName": "language-v0",
+  "description": "Language support for Imparato v0 text format.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "v0",
+        "aliases": [
+          "v0",
+          "v0"
+        ],
+        "extensions": [
+          ".v0.txt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "v0",
-            "aliases": ["v0", "v0"],
-            "extensions": [".v0.txt"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "v0",
-            "scopeName": "source.v0",
-            "path": "./syntaxes/language-v0.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "v0",
+        "scopeName": "source.v0",
+        "path": "./syntaxes/language-v0.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Imparato/language-v0.git"
+  },
+  "homepage": "https://github.com/Imparato/language-v0"
 }

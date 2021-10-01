@@ -4,6 +4,9 @@ This is VS Code language (grammar) support for internal v0 format of [Imparato](
 
 (If you are not an Imparato developer or contributor, this grammar is of no interest to you, except to serve as VS Code grammar example.)
 
+
+![Screenshot V0](./screenshot.png)
+
 ## Installation
 
 Currently, this package is not published in the VS Code marketplace. Instead, clone this repository :
